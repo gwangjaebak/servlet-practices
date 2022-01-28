@@ -3,7 +3,7 @@
 <%@page import="com.poscoict.guestbook.vo.GuestbookVo"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	List<GuestbookVo> list = (List<GuestbookVo>)request.getAttribute("list");
+List<GuestbookVo> list = (List<GuestbookVo>)request.getAttribute("list");
 %>
 <!DOCTYPE html>
 <html>
@@ -12,7 +12,7 @@
 <title>방명록</title>
 </head>
 <body>
-	<form action="<%=request.getContextPath() %>/gb" method="post">
+	<form action="<%=request.getContextPath()%>/gb" method="post">
 		<input type="hidden" name="a" value="add">
 		<table border=1 width=500>
 			<tr>
@@ -30,9 +30,9 @@
 	
 	<%
 		int count = list.size();
-		int index = 0;
-		for(GuestbookVo vo : list){
-	%>
+				int index = 0;
+				for(GuestbookVo vo : list){
+		%>
 		<br>
 		<table width=510 border=1>
 			<tr>
